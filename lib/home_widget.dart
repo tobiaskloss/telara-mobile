@@ -1,37 +1,40 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:telara_mobile/settings_widget.dart';
+import 'package:telara_mobile/themes.dart';
 import 'event_list_widget.dart';
 
 class Home extends StatefulWidget {
-  Function themeChanged;
+  final ThemeBloc themeBloc;
+  final SharedPreferences sharedPreferences;
+  Home({Key key, this.themeBloc, this.sharedPreferences}) : super(key: key);
+
 
   @override
   State<StatefulWidget> createState() {
-    return _HomeState(themeChanged);
+    return _HomeState();
   }
-
-  Home(this.themeChanged);
 }
 
 class _HomeState extends State<Home> {
-  Function themeChanged;
   int _currentIndex = 0;
-  final List<Widget> _children = [
-    EventListWidget(),
-    EventListWidget(),
-    EventListWidget(),
-  ];
+  final List<Widget> _children = new List<Widget>();
+
+  @override
+  void initState() {
+    super.initState();
+    _children.addAll([
+      EventListWidget(),
+      EventListWidget(),
+      SettingsWidget(themeBloc: widget.themeBloc, sharedPreferences: widget.sharedPreferences),
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Telara Mobile'),
-        actions: <Widget>[
-          new IconButton(
-            icon: Icon(Icons.autorenew),
-            onPressed: themeChanged,
-          )
-        ],
+        title: Text('Telara Mobile')
       ),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -61,6 +64,4 @@ class _HomeState extends State<Home> {
       _currentIndex = index;
     });
   }
-
-  _HomeState(this.themeChanged);
 }
