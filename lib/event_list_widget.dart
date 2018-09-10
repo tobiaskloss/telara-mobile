@@ -3,9 +3,14 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:telara_mobile/zone_event_model.dart';
 
 class EventListWidget extends StatefulWidget {
+  SharedPreferences sharedPreferences;
+
+  EventListWidget({Key key, this.sharedPreferences}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     return new EventListState();
@@ -74,9 +79,25 @@ class EventListState extends State<EventListWidget> {
   Future<List<Widget>> _buildEvents() async {
     List<Widget> newItems = new List<Widget>();
 
-    List<ZoneEvent> zoneEventList = await _fetchEvents(_basePathEU, _euShardMap, 'EU');
-    zoneEventList.addAll(await _fetchEvents(_basePathUS, _usShardMap, 'US'));
-    zoneEventList.addAll(await _fetchEvents(_basePathUS, _primeShardMap, 'Prime'));
+    var showEU = widget.sharedPreferences.getBool('events_eu');
+    showEU = showEU != null ? showEU : true;
+
+    var showUS = widget.sharedPreferences.getBool('events_us');
+    showUS = showUS != null ? showUS : true;
+
+    var showPrime = widget.sharedPreferences.getBool('events_prime');
+    showPrime = showPrime != null ? showPrime : true;
+
+    List<ZoneEvent> zoneEventList = new List<ZoneEvent>();
+    if (showEU) {
+      zoneEventList.addAll(await _fetchEvents(_basePathEU, _euShardMap, 'EU'));
+    }
+    if (showUS) {
+      zoneEventList.addAll(await _fetchEvents(_basePathUS, _usShardMap, 'US'));
+    }
+    if (showPrime) {
+      zoneEventList.addAll(await _fetchEvents(_basePathUS, _primeShardMap, 'Prime'));
+    }
 
     zoneEventList.sort((a, b) => a.ageInMinutes.compareTo(b.ageInMinutes));
 
@@ -84,8 +105,7 @@ class EventListState extends State<EventListWidget> {
     return newItems;
   }
 
-  void createListItems(
-      List<ZoneEvent> eventNames, List<Widget> newItems) {
+  void createListItems(List<ZoneEvent> eventNames, List<Widget> newItems) {
     for (var zoneEvent in eventNames) {
       newItems.add(new ListTile(
         title: new Row(
@@ -94,7 +114,11 @@ class EventListState extends State<EventListWidget> {
                 child: new Column(
               children: <Widget>[
                 new Text(zoneEvent.name),
-                new Text(zoneEvent.dcName + ' - ' + zoneEvent.shardName + ' - ' + zoneEvent.zoneName),
+                new Text(zoneEvent.dcName +
+                    ' - ' +
+                    zoneEvent.shardName +
+                    ' - ' +
+                    zoneEvent.zoneName),
               ],
               crossAxisAlignment: CrossAxisAlignment.start,
             )),
@@ -112,7 +136,8 @@ class EventListState extends State<EventListWidget> {
     }
   }
 
-  Future<List<ZoneEvent>> _fetchEvents(String baseUrl, Map shardMap, String dcName) async {
+  Future<List<ZoneEvent>> _fetchEvents(
+      String baseUrl, Map shardMap, String dcName) async {
     List<ZoneEvent> eventNames = new List<ZoneEvent>();
 
     for (var key in shardMap.keys) {

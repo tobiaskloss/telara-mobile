@@ -24,8 +24,8 @@ class _HomeState extends State<Home> {
   void initState() {
     super.initState();
     _children.addAll([
-      EventListWidget(),
-      EventListWidget(),
+      EventListWidget(sharedPreferences: widget.sharedPreferences),
+      EventListWidget(sharedPreferences: widget.sharedPreferences),
       SettingsWidget(themeBloc: widget.themeBloc, sharedPreferences: widget.sharedPreferences),
     ]);
   }
@@ -51,8 +51,8 @@ class _HomeState extends State<Home> {
             title: new Text('Database'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            title: Text('Profile'),
+            icon: Icon(Icons.settings),
+            title: Text('Settings'),
           )
         ],
       ),
