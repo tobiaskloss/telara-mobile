@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/tobiaskloss/telara-mobile/tree/develop.svg?style=svg)](https://circleci.com/gh/tobiaskloss/telara-mobile/tree/develop)
+
 # telara_mobile
 
 Mobile companion for Rift
