@@ -6,6 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:telara_mobile/themes.dart';
 import 'package:telara_mobile/zone_event_model.dart';
+import 'package:telara_mobile/language.dart';
 
 class SettingsWidget extends StatefulWidget {
   final ThemeBloc themeBloc;
@@ -20,7 +21,6 @@ class SettingsWidget extends StatefulWidget {
   }
 }
 
-enum Language { english, german, french }
 
 class SettingsWidgetState extends State<SettingsWidget> {
   bool _useDarkTheme;
@@ -146,7 +146,6 @@ class SettingsWidgetState extends State<SettingsWidget> {
     setState(() {
       _language = selectedLanguage;
     });
-    //todo apply language
   }
 
   void saveTheme(bool useDarkTheme) {

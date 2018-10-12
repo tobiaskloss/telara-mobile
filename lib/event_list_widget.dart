@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:telara_mobile/zone_event_model.dart';
+import 'package:telara_mobile/translated_zone_event_model.dart';
+import 'package:telara_mobile/event_translator.dart';
+import 'package:telara_mobile/language.dart';
 
 class EventListWidget extends StatefulWidget {
   SharedPreferences sharedPreferences;
@@ -88,6 +91,8 @@ class EventListState extends State<EventListWidget> {
     var showPrime = widget.sharedPreferences.getBool('events_prime');
     showPrime = showPrime != null ? showPrime : true;
 
+    print('fetching events');
+
     List<ZoneEvent> zoneEventList = new List<ZoneEvent>();
     if (showEU) {
       zoneEventList.addAll(await _fetchEvents(_basePathEU, _euShardMap, 'EU'));
@@ -99,13 +104,21 @@ class EventListState extends State<EventListWidget> {
       zoneEventList.addAll(await _fetchEvents(_basePathUS, _primeShardMap, 'Prime'));
     }
 
-    zoneEventList.sort((a, b) => a.ageInMinutes.compareTo(b.ageInMinutes));
+    var languageString = widget.sharedPreferences.getString('language');
+    var language = LanguageConverter.fromString(languageString);
 
-    createListItems(zoneEventList, newItems);
+
+    var eventTranslator = new EventTranslator();
+    List<TranslatedZoneEvent> translatedZoneEventList = zoneEventList.map((zoneEvent) => eventTranslator.translateZoneEvent(zoneEvent, language)).toList();
+
+    translatedZoneEventList.sort((a, b) => a.ageInMinutes.compareTo(b.ageInMinutes));
+
+
+    createListItems(translatedZoneEventList, newItems);
     return newItems;
   }
 
-  void createListItems(List<ZoneEvent> eventNames, List<Widget> newItems) {
+  void createListItems(List<TranslatedZoneEvent> eventNames, List<Widget> newItems) {
     for (var zoneEvent in eventNames) {
       newItems.add(new ListTile(
         title: new Row(
@@ -114,11 +127,8 @@ class EventListState extends State<EventListWidget> {
                 child: new Column(
               children: <Widget>[
                 new Text(zoneEvent.name),
-                new Text(zoneEvent.dcName +
-                    ' - ' +
-                    zoneEvent.shardName +
-                    ' - ' +
-                    zoneEvent.zoneName),
+                new Text(zoneEvent.map.name + ' - ' + zoneEvent.zone.name),
+                new Text(zoneEvent.shard.name + ' - ' + zoneEvent.shard.dc),
               ],
               crossAxisAlignment: CrossAxisAlignment.start,
             )),
