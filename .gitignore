@@ -6,4 +6,7 @@
 
 build/
 
+android/key.properties
+android/*.jks
+
 .flutter-plugins
