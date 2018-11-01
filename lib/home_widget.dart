@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:telara_mobile/settings_widget.dart';
+import 'package:telara_mobile/telaradb_widget.dart';
 import 'package:telara_mobile/themes.dart';
 import 'event_list_widget.dart';
 
@@ -25,7 +26,7 @@ class _HomeState extends State<Home> {
     super.initState();
     _children.addAll([
       EventListWidget(sharedPreferences: widget.sharedPreferences),
-      EventListWidget(sharedPreferences: widget.sharedPreferences),
+      TelaraDBWidget(sharedPreferences: widget.sharedPreferences),
       SettingsWidget(themeBloc: widget.themeBloc, sharedPreferences: widget.sharedPreferences),
     ]);
   }
