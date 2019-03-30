@@ -1,5 +1,6 @@
 name: telara_mobile
 description: Mobile companion for Rift
+version: 1.0.1+2
 
 dependencies:
   flutter:
