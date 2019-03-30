@@ -11,7 +11,12 @@ class ZoneEventTranslation {
       this.name, this.id, this.language, this.maxRuntime, this.planes);
 
   static fromJson(Map<String, Object> map) {
-    var zoneEventTranslation = new ZoneEventTranslation(map['name'], map['id'], LanguageConverter.fromString(map['language']), map['maxRuntime'], map['planes']);
+    var zoneEventTranslation = new ZoneEventTranslation(
+        map['name'],
+        map['id'],
+        LanguageConverter.fromString(map['language']),
+        map['maxRuntime'],
+        map['planes']);
     return zoneEventTranslation;
   }
 }

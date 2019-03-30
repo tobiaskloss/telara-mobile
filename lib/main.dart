@@ -6,17 +6,18 @@ import 'home_widget.dart';
 void main() => runApp(new FutureBuilder(
     future: SharedPreferences.getInstance(),
     builder: (_, future) {
-      return future.hasData ? new App(future.data) : new Center(
-        child: new CircularProgressIndicator(),
-      );
-    }
-));
+      return future.hasData
+          ? new App(future.data)
+          : new Center(
+              child: new CircularProgressIndicator(),
+            );
+    }));
 
 class App extends StatelessWidget {
   var sharedPreferences;
 
   App(this.sharedPreferences);
-  
+
   @override
   Widget build(BuildContext context) {
     final ThemeBloc themeBloc = ThemeBloc(sharedPreferences);
@@ -27,7 +28,8 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'Telara Mobile',
             theme: snapshot.data,
-            home: Home(themeBloc: themeBloc, sharedPreferences: sharedPreferences),
+            home: Home(
+                themeBloc: themeBloc, sharedPreferences: sharedPreferences),
           );
         });
   }

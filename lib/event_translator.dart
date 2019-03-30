@@ -4351,157 +4351,856 @@ class EventTranslator {
   ];
 
   static List<RiftShard> riftShardTranslations = [
-   RiftShard.fromJson({'dc':'NA','id':1701,'name':'Seastone','pvp':true,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1702,'name':'Greybriar','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1704,'name':'Deepwood','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1706,'name':'Wolfsbane','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1707,'name':'Faeblight','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1708,'name':'Laethys','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'NA','id':1721,'name':'Hailol','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'Prime','id':1801,'name':'Vigil','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'EU','id':2702,'name':'Bloodiron','pvp':true,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'EU','id':2711,'name':'Brutwacht','pvp':false,'language':'Language.german'}),
-   RiftShard.fromJson({'dc':'EU','id':2714,'name':'Brisesol','pvp':false,'language':'Language.french'}),
-   RiftShard.fromJson({'dc':'EU','id':2721,'name':'Gelidra','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'EU','id':2722,'name':'Zaviel','pvp':false,'language':'Language.english'}),
-   RiftShard.fromJson({'dc':'EU','id':2741,'name':'Typhiria','pvp':false,'language':'Language.english'})
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1701,
+      'name': 'Seastone',
+      'pvp': true,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1702,
+      'name': 'Greybriar',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1704,
+      'name': 'Deepwood',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1706,
+      'name': 'Wolfsbane',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1707,
+      'name': 'Faeblight',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1708,
+      'name': 'Laethys',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'NA',
+      'id': 1721,
+      'name': 'Hailol',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'Prime',
+      'id': 1801,
+      'name': 'Vigil',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2702,
+      'name': 'Bloodiron',
+      'pvp': true,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2711,
+      'name': 'Brutwacht',
+      'pvp': false,
+      'language': 'Language.german'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2714,
+      'name': 'Brisesol',
+      'pvp': false,
+      'language': 'Language.french'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2721,
+      'name': 'Gelidra',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2722,
+      'name': 'Zaviel',
+      'pvp': false,
+      'language': 'Language.english'
+    }),
+    RiftShard.fromJson({
+      'dc': 'EU',
+      'id': 2741,
+      'name': 'Typhiria',
+      'pvp': false,
+      'language': 'Language.english'
+    })
   ];
   static List<RiftZone> riftZoneTranslations = [
-    RiftZone.fromJson({'name':'Schimmersand','id':6,'language':'Language.german','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Shimmersand','id':6,'language':'Language.english','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Sable-chatoyant','id':6,'language':'Language.french','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Silberwald','id':12,'language':'Language.german','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Silverwood','id':12,'language':'Language.english','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Bois d\'Argent','id':12,'language':'Language.french','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Freimark','id':19,'language':'Language.german','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Freemarch','id':19,'language':'Language.english','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Libremarche','id':19,'language':'Language.french','mapId':1,'maxLevel':20}),
-    RiftZone.fromJson({'name':'Wundwaldregion','id':20,'language':'Language.german','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Scarwood Reach','id':20,'language':'Language.english','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Étendue de Bois Meurtris','id':20,'language':'Language.french','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Eisenkieferngipfel','id':22,'language':'Language.german','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Iron Pine Peak','id':22,'language':'Language.english','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Pic du Pin de fer','id':22,'language':'Language.french','mapId':1,'maxLevel':35}),
-    RiftZone.fromJson({'name':'Mondschattenberge','id':24,'language':'Language.german','mapId':1,'maxLevel':40}),
-    RiftZone.fromJson({'name':'Moonshade Highlands','id':24,'language':'Language.english','mapId':1,'maxLevel':40}),
-    RiftZone.fromJson({'name':'Hautes-Terres d\'Ombrelune','id':24,'language':'Language.french','mapId':1,'maxLevel':40}),
-    RiftZone.fromJson({'name':'Stillmoor','id':26,'language':'Language.german','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Stillmoor','id':26,'language':'Language.english','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Mornelande','id':26,'language':'Language.french','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Dämmerwald','id':27,'language':'Language.german','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Gloamwood','id':27,'language':'Language.english','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Bois du Crépuscule','id':27,'language':'Language.french','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Ebenenberührte Wildnis','id':28,'language':'Language.german','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Planetouched Wilds','id':28,'language':'Language.english','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Étendues marquées par les Plans','id':28,'language':'Language.french','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Goboro-Riff','id':301,'language':'Language.german','mapId':3,'maxLevel':61}),
-    RiftZone.fromJson({'name':'Goboro Reef','id':301,'language':'Language.english','mapId':3,'maxLevel':61}),
-    RiftZone.fromJson({'name':'Récif de Goboro','id':301,'language':'Language.french','mapId':3,'maxLevel':61}),
-    RiftZone.fromJson({'name':'Draumheim','id':302,'language':'Language.german','mapId':3,'maxLevel':63}),
-    RiftZone.fromJson({'name':'Draumheim','id':302,'language':'Language.english','mapId':3,'maxLevel':63}),
-    RiftZone.fromJson({'name':'Draumheim','id':302,'language':'Language.french','mapId':3,'maxLevel':63}),
-    RiftZone.fromJson({'name':'Tarken-Gletscher','id':303,'language':'Language.german','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Tarken Glacier','id':303,'language':'Language.english','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Glacier de Tarken','id':303,'language':'Language.french','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Scharlachrote Schlucht','id':26580443,'language':'Language.german','mapId':1,'maxLevel':29}),
-    RiftZone.fromJson({'name':'Scarlet Gorge','id':26580443,'language':'Language.english','mapId':1,'maxLevel':29}),
-    RiftZone.fromJson({'name':'Gorges Écarlates','id':26580443,'language':'Language.french','mapId':1,'maxLevel':29}),
-    RiftZone.fromJson({'name':'Das Dendrom','id':282584906,'language':'Language.german','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'The Dendrome','id':282584906,'language':'Language.english','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Le Rhizome','id':282584906,'language':'Language.french','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Ödlande','id':336995470,'language':'Language.german','mapId':1,'maxLevel':44}),
-    RiftZone.fromJson({'name':'Droughtlands','id':336995470,'language':'Language.english','mapId':1,'maxLevel':44}),
-    RiftZone.fromJson({'name':'Plaines Arides','id':336995470,'language':'Language.french','mapId':1,'maxLevel':44}),
-    RiftZone.fromJson({'name':'Tyrannenthron','id':426135797,'language':'Language.german','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Tyrant\'s Throne','id':426135797,'language':'Language.english','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Trône du Tyran','id':426135797,'language':'Language.french','mapId':3,'maxLevel':65}),
-    RiftZone.fromJson({'name':'Königreich Pelladane','id':479431687,'language':'Language.german','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Kingdom of Pelladane','id':479431687,'language':'Language.english','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Royaume de Pelladane','id':479431687,'language':'Language.french','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Vostigar-Gipfel','id':511816852,'language':'Language.german','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Vostigar Peaks','id':511816852,'language':'Language.english','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Pics de Vostigar','id':511816852,'language':'Language.french','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Gedlonianisches Ödland','id':788055204,'language':'Language.german','mapId':4,'maxLevel':67}),
-    RiftZone.fromJson({'name':'Gedlo Badlands','id':788055204,'language':'Language.english','mapId':4,'maxLevel':67}),
-    RiftZone.fromJson({'name':'Maleterres de Gedlo','id':788055204,'language':'Language.french','mapId':4,'maxLevel':67}),
-    RiftZone.fromJson({'name':'Ashora','id':790513416,'language':'Language.german','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Ashora','id':790513416,'language':'Language.english','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Ashora','id':790513416,'language':'Language.french','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Steppen der Unendlichkeit','id':798793247,'language':'Language.german','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Steppes of Infinity','id':798793247,'language':'Language.english','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Steppes de l\'Infini','id':798793247,'language':'Language.french','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Morban','id':956914599,'language':'Language.german','mapId':2,'maxLevel':59}),
-    RiftZone.fromJson({'name':'Morban','id':956914599,'language':'Language.english','mapId':2,'maxLevel':59}),
-    RiftZone.fromJson({'name':'Morban','id':956914599,'language':'Language.french','mapId':2,'maxLevel':59}),
-    RiftZone.fromJson({'name':'Xarth-Sumpf','id':1208799201,'language':'Language.german','mapId':4,'maxLevel':69}),
-    RiftZone.fromJson({'name':'Xarth Mire','id':1208799201,'language':'Language.english','mapId':4,'maxLevel':69}),
-    RiftZone.fromJson({'name':'Bourbier de Xarth','id':1208799201,'language':'Language.french','mapId':4,'maxLevel':69}),
-    RiftZone.fromJson({'name':'Östliche Besitztümer','id':1213399942,'language':'Language.german','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Eastern Holdings','id':1213399942,'language':'Language.english','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Fiefs de l\'Orient','id':1213399942,'language':'Language.french','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Königszirkel','id':1300766935,'language':'Language.german','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Kingsward','id':1300766935,'language':'Language.english','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Protectorat du Roi','id':1300766935,'language':'Language.french','mapId':2,'maxLevel':60}),
-    RiftZone.fromJson({'name':'Eiferer-Reich','id':1446819710,'language':'Language.german','mapId':2,'maxLevel':58}),
-    RiftZone.fromJson({'name':'Ardent Domain','id':1446819710,'language':'Language.english','mapId':2,'maxLevel':58}),
-    RiftZone.fromJson({'name':'Contrée Ardente','id':1446819710,'language':'Language.french','mapId':2,'maxLevel':58}),
-    RiftZone.fromJson({'name':'Steinfeld','id':1481781477,'language':'Language.german','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Stonefield','id':1481781477,'language':'Language.english','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Champ de Pierre','id':1481781477,'language':'Language.french','mapId':1,'maxLevel':26}),
-    RiftZone.fromJson({'name':'Seratos','id':1494372221,'language':'Language.german','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Seratos','id':1494372221,'language':'Language.english','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Serratos','id':1494372221,'language':'Language.french','mapId':2,'maxLevel':56}),
-    RiftZone.fromJson({'name':'Kap Jul','id':1770829751,'language':'Language.german','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Cape Jule','id':1770829751,'language':'Language.english','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Cap Yule','id':1770829751,'language':'Language.french','mapId':2,'maxLevel':52}),
-    RiftZone.fromJson({'name':'Stadtkern','id':1967477725,'language':'Language.german','mapId':2,'maxLevel':53}),
-    RiftZone.fromJson({'name':'City Core','id':1967477725,'language':'Language.english','mapId':2,'maxLevel':53}),
-    RiftZone.fromJson({'name':'Cœur de la Cité','id':1967477725,'language':'Language.french','mapId':2,'maxLevel':53}),
-    RiftZone.fromJson({'name':'Glutinsel','id':1992854106,'language':'Language.german','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Ember Isle','id':1992854106,'language':'Language.english','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Île de Braise','id':1992854106,'language':'Language.french','mapId':1,'maxLevel':50}),
-    RiftZone.fromJson({'name':'Aschenfall','id':2007770238,'language':'Language.german','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Ashenfell','id':2007770238,'language':'Language.english','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Chutecendres','id':2007770238,'language':'Language.french','mapId':4,'maxLevel':70}),
-    RiftZone.fromJson({'name':'Skatherran-Wald','id':2066418614,'language':'Language.german','mapId':4,'maxLevel':66}),
-    RiftZone.fromJson({'name':'Scatherran Forest','id':2066418614,'language':'Language.english','mapId':4,'maxLevel':66}),
-    RiftZone.fromJson({'name':'Forêt des Bourreaux','id':2066418614,'language':'Language.french','mapId':4,'maxLevel':66})
+    RiftZone.fromJson({
+      'name': 'Schimmersand',
+      'id': 6,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Shimmersand',
+      'id': 6,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Sable-chatoyant',
+      'id': 6,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Silberwald',
+      'id': 12,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Silverwood',
+      'id': 12,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Bois d\'Argent',
+      'id': 12,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Freimark',
+      'id': 19,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Freemarch',
+      'id': 19,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Libremarche',
+      'id': 19,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 20
+    }),
+    RiftZone.fromJson({
+      'name': 'Wundwaldregion',
+      'id': 20,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Scarwood Reach',
+      'id': 20,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Étendue de Bois Meurtris',
+      'id': 20,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Eisenkieferngipfel',
+      'id': 22,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Iron Pine Peak',
+      'id': 22,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Pic du Pin de fer',
+      'id': 22,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 35
+    }),
+    RiftZone.fromJson({
+      'name': 'Mondschattenberge',
+      'id': 24,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 40
+    }),
+    RiftZone.fromJson({
+      'name': 'Moonshade Highlands',
+      'id': 24,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 40
+    }),
+    RiftZone.fromJson({
+      'name': 'Hautes-Terres d\'Ombrelune',
+      'id': 24,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 40
+    }),
+    RiftZone.fromJson({
+      'name': 'Stillmoor',
+      'id': 26,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Stillmoor',
+      'id': 26,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Mornelande',
+      'id': 26,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Dämmerwald',
+      'id': 27,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Gloamwood',
+      'id': 27,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Bois du Crépuscule',
+      'id': 27,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Ebenenberührte Wildnis',
+      'id': 28,
+      'language': 'Language.german',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Planetouched Wilds',
+      'id': 28,
+      'language': 'Language.english',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Étendues marquées par les Plans',
+      'id': 28,
+      'language': 'Language.french',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Goboro-Riff',
+      'id': 301,
+      'language': 'Language.german',
+      'mapId': 3,
+      'maxLevel': 61
+    }),
+    RiftZone.fromJson({
+      'name': 'Goboro Reef',
+      'id': 301,
+      'language': 'Language.english',
+      'mapId': 3,
+      'maxLevel': 61
+    }),
+    RiftZone.fromJson({
+      'name': 'Récif de Goboro',
+      'id': 301,
+      'language': 'Language.french',
+      'mapId': 3,
+      'maxLevel': 61
+    }),
+    RiftZone.fromJson({
+      'name': 'Draumheim',
+      'id': 302,
+      'language': 'Language.german',
+      'mapId': 3,
+      'maxLevel': 63
+    }),
+    RiftZone.fromJson({
+      'name': 'Draumheim',
+      'id': 302,
+      'language': 'Language.english',
+      'mapId': 3,
+      'maxLevel': 63
+    }),
+    RiftZone.fromJson({
+      'name': 'Draumheim',
+      'id': 302,
+      'language': 'Language.french',
+      'mapId': 3,
+      'maxLevel': 63
+    }),
+    RiftZone.fromJson({
+      'name': 'Tarken-Gletscher',
+      'id': 303,
+      'language': 'Language.german',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Tarken Glacier',
+      'id': 303,
+      'language': 'Language.english',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Glacier de Tarken',
+      'id': 303,
+      'language': 'Language.french',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Scharlachrote Schlucht',
+      'id': 26580443,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 29
+    }),
+    RiftZone.fromJson({
+      'name': 'Scarlet Gorge',
+      'id': 26580443,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 29
+    }),
+    RiftZone.fromJson({
+      'name': 'Gorges Écarlates',
+      'id': 26580443,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 29
+    }),
+    RiftZone.fromJson({
+      'name': 'Das Dendrom',
+      'id': 282584906,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'The Dendrome',
+      'id': 282584906,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Le Rhizome',
+      'id': 282584906,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Ödlande',
+      'id': 336995470,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 44
+    }),
+    RiftZone.fromJson({
+      'name': 'Droughtlands',
+      'id': 336995470,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 44
+    }),
+    RiftZone.fromJson({
+      'name': 'Plaines Arides',
+      'id': 336995470,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 44
+    }),
+    RiftZone.fromJson({
+      'name': 'Tyrannenthron',
+      'id': 426135797,
+      'language': 'Language.german',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Tyrant\'s Throne',
+      'id': 426135797,
+      'language': 'Language.english',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Trône du Tyran',
+      'id': 426135797,
+      'language': 'Language.french',
+      'mapId': 3,
+      'maxLevel': 65
+    }),
+    RiftZone.fromJson({
+      'name': 'Königreich Pelladane',
+      'id': 479431687,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Kingdom of Pelladane',
+      'id': 479431687,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Royaume de Pelladane',
+      'id': 479431687,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Vostigar-Gipfel',
+      'id': 511816852,
+      'language': 'Language.german',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Vostigar Peaks',
+      'id': 511816852,
+      'language': 'Language.english',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Pics de Vostigar',
+      'id': 511816852,
+      'language': 'Language.french',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Gedlonianisches Ödland',
+      'id': 788055204,
+      'language': 'Language.german',
+      'mapId': 4,
+      'maxLevel': 67
+    }),
+    RiftZone.fromJson({
+      'name': 'Gedlo Badlands',
+      'id': 788055204,
+      'language': 'Language.english',
+      'mapId': 4,
+      'maxLevel': 67
+    }),
+    RiftZone.fromJson({
+      'name': 'Maleterres de Gedlo',
+      'id': 788055204,
+      'language': 'Language.french',
+      'mapId': 4,
+      'maxLevel': 67
+    }),
+    RiftZone.fromJson({
+      'name': 'Ashora',
+      'id': 790513416,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Ashora',
+      'id': 790513416,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Ashora',
+      'id': 790513416,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Steppen der Unendlichkeit',
+      'id': 798793247,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Steppes of Infinity',
+      'id': 798793247,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Steppes de l\'Infini',
+      'id': 798793247,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Morban',
+      'id': 956914599,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 59
+    }),
+    RiftZone.fromJson({
+      'name': 'Morban',
+      'id': 956914599,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 59
+    }),
+    RiftZone.fromJson({
+      'name': 'Morban',
+      'id': 956914599,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 59
+    }),
+    RiftZone.fromJson({
+      'name': 'Xarth-Sumpf',
+      'id': 1208799201,
+      'language': 'Language.german',
+      'mapId': 4,
+      'maxLevel': 69
+    }),
+    RiftZone.fromJson({
+      'name': 'Xarth Mire',
+      'id': 1208799201,
+      'language': 'Language.english',
+      'mapId': 4,
+      'maxLevel': 69
+    }),
+    RiftZone.fromJson({
+      'name': 'Bourbier de Xarth',
+      'id': 1208799201,
+      'language': 'Language.french',
+      'mapId': 4,
+      'maxLevel': 69
+    }),
+    RiftZone.fromJson({
+      'name': 'Östliche Besitztümer',
+      'id': 1213399942,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Eastern Holdings',
+      'id': 1213399942,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Fiefs de l\'Orient',
+      'id': 1213399942,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Königszirkel',
+      'id': 1300766935,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Kingsward',
+      'id': 1300766935,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Protectorat du Roi',
+      'id': 1300766935,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 60
+    }),
+    RiftZone.fromJson({
+      'name': 'Eiferer-Reich',
+      'id': 1446819710,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 58
+    }),
+    RiftZone.fromJson({
+      'name': 'Ardent Domain',
+      'id': 1446819710,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 58
+    }),
+    RiftZone.fromJson({
+      'name': 'Contrée Ardente',
+      'id': 1446819710,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 58
+    }),
+    RiftZone.fromJson({
+      'name': 'Steinfeld',
+      'id': 1481781477,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Stonefield',
+      'id': 1481781477,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Champ de Pierre',
+      'id': 1481781477,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 26
+    }),
+    RiftZone.fromJson({
+      'name': 'Seratos',
+      'id': 1494372221,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Seratos',
+      'id': 1494372221,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Serratos',
+      'id': 1494372221,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 56
+    }),
+    RiftZone.fromJson({
+      'name': 'Kap Jul',
+      'id': 1770829751,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Cape Jule',
+      'id': 1770829751,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Cap Yule',
+      'id': 1770829751,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 52
+    }),
+    RiftZone.fromJson({
+      'name': 'Stadtkern',
+      'id': 1967477725,
+      'language': 'Language.german',
+      'mapId': 2,
+      'maxLevel': 53
+    }),
+    RiftZone.fromJson({
+      'name': 'City Core',
+      'id': 1967477725,
+      'language': 'Language.english',
+      'mapId': 2,
+      'maxLevel': 53
+    }),
+    RiftZone.fromJson({
+      'name': 'Cœur de la Cité',
+      'id': 1967477725,
+      'language': 'Language.french',
+      'mapId': 2,
+      'maxLevel': 53
+    }),
+    RiftZone.fromJson({
+      'name': 'Glutinsel',
+      'id': 1992854106,
+      'language': 'Language.german',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Ember Isle',
+      'id': 1992854106,
+      'language': 'Language.english',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Île de Braise',
+      'id': 1992854106,
+      'language': 'Language.french',
+      'mapId': 1,
+      'maxLevel': 50
+    }),
+    RiftZone.fromJson({
+      'name': 'Aschenfall',
+      'id': 2007770238,
+      'language': 'Language.german',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Ashenfell',
+      'id': 2007770238,
+      'language': 'Language.english',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Chutecendres',
+      'id': 2007770238,
+      'language': 'Language.french',
+      'mapId': 4,
+      'maxLevel': 70
+    }),
+    RiftZone.fromJson({
+      'name': 'Skatherran-Wald',
+      'id': 2066418614,
+      'language': 'Language.german',
+      'mapId': 4,
+      'maxLevel': 66
+    }),
+    RiftZone.fromJson({
+      'name': 'Scatherran Forest',
+      'id': 2066418614,
+      'language': 'Language.english',
+      'mapId': 4,
+      'maxLevel': 66
+    }),
+    RiftZone.fromJson({
+      'name': 'Forêt des Bourreaux',
+      'id': 2066418614,
+      'language': 'Language.french',
+      'mapId': 4,
+      'maxLevel': 66
+    })
   ];
   static List<RiftMap> riftMapTranslations = [
-    RiftMap.fromJson({'name':'Mathosia','id':1,'language':'Language.german'}),
-    RiftMap.fromJson({'name':'Mathosia','id':1,'language':'Language.english'}),
-    RiftMap.fromJson({'name':'Mathosia','id':1,'language':'Language.french'}),
-    RiftMap.fromJson({'name':'Brevane/Dämmerland','id':2,'language':'Language.german'}),
-    RiftMap.fromJson({'name':'Brevane/Dusken','id':2,'language':'Language.english'}),
-    RiftMap.fromJson({'name':'Tynandra/Brunante','id':2,'language':'Language.french'}),
-    RiftMap.fromJson({'name':'Ebene des Wasser','id':3,'language':'Language.german'}),
-    RiftMap.fromJson({'name':'Plane of Water','id':3,'language':'Language.english'}),
-    RiftMap.fromJson({'name':'Plan de l\'Eau','id':3,'language':'Language.french'}),
-    RiftMap.fromJson({'name':'Himmlische Lande','id':4,'language':'Language.german'}),
-    RiftMap.fromJson({'name':'Celestial Lands','id':4,'language':'Language.english'}),
-    RiftMap.fromJson({'name':'Terres Célestes','id':4,'language':'Language.french'})
+    RiftMap.fromJson(
+        {'name': 'Mathosia', 'id': 1, 'language': 'Language.german'}),
+    RiftMap.fromJson(
+        {'name': 'Mathosia', 'id': 1, 'language': 'Language.english'}),
+    RiftMap.fromJson(
+        {'name': 'Mathosia', 'id': 1, 'language': 'Language.french'}),
+    RiftMap.fromJson(
+        {'name': 'Brevane/Dämmerland', 'id': 2, 'language': 'Language.german'}),
+    RiftMap.fromJson(
+        {'name': 'Brevane/Dusken', 'id': 2, 'language': 'Language.english'}),
+    RiftMap.fromJson(
+        {'name': 'Tynandra/Brunante', 'id': 2, 'language': 'Language.french'}),
+    RiftMap.fromJson(
+        {'name': 'Ebene des Wasser', 'id': 3, 'language': 'Language.german'}),
+    RiftMap.fromJson(
+        {'name': 'Plane of Water', 'id': 3, 'language': 'Language.english'}),
+    RiftMap.fromJson(
+        {'name': 'Plan de l\'Eau', 'id': 3, 'language': 'Language.french'}),
+    RiftMap.fromJson(
+        {'name': 'Himmlische Lande', 'id': 4, 'language': 'Language.german'}),
+    RiftMap.fromJson(
+        {'name': 'Celestial Lands', 'id': 4, 'language': 'Language.english'}),
+    RiftMap.fromJson(
+        {'name': 'Terres Célestes', 'id': 4, 'language': 'Language.french'})
   ];
 
-  TranslatedZoneEvent translateZoneEvent(ZoneEvent zoneEvent, Language targetLanguage) {
+  TranslatedZoneEvent translateZoneEvent(
+      ZoneEvent zoneEvent, Language targetLanguage) {
     print('Translating Event');
 
     var sourceZoneEventTranslation = findSourceTranslation(zoneEvent);
-    if(sourceZoneEventTranslation == null) {
+    if (sourceZoneEventTranslation == null) {
       print('Not Good!');
     }
 
-    var targetZoneEventTranslation = findTargetTranslation(sourceZoneEventTranslation, targetLanguage);
-    if(targetZoneEventTranslation == null) {
+    var targetZoneEventTranslation =
+        findTargetTranslation(sourceZoneEventTranslation, targetLanguage);
+    if (targetZoneEventTranslation == null) {
       print('Well..');
       targetZoneEventTranslation = sourceZoneEventTranslation;
     }
-
 
     RiftShard shard = getTranslatedShard(zoneEvent.shardName, targetLanguage);
     RiftZone zone = getTranslatedZone(zoneEvent.zoneName, targetLanguage);
     RiftMap map = getTranslatedMap(zone.mapId, targetLanguage);
 
-    return new TranslatedZoneEvent(targetZoneEventTranslation.name, zoneEvent.ageInMinutes, targetZoneEventTranslation.language, targetZoneEventTranslation.maxRuntime, targetZoneEventTranslation.planes, shard, zone, map);
+    return new TranslatedZoneEvent(
+        targetZoneEventTranslation.name,
+        zoneEvent.ageInMinutes,
+        targetZoneEventTranslation.language,
+        targetZoneEventTranslation.maxRuntime,
+        targetZoneEventTranslation.planes,
+        shard,
+        zone,
+        map);
   }
 
   RiftShard getTranslatedShard(String shardName, Language targetLanguage) {
@@ -4520,6 +5219,7 @@ class EventTranslator {
 
     return targetShard == null ? sourceShard : targetShard;
   }
+
   RiftZone getTranslatedZone(String zoneName, Language targetLanguage) {
     var sourceZone = null;
     for (var zone in riftZoneTranslations) {
@@ -4536,8 +5236,8 @@ class EventTranslator {
 
     return targetZone == null ? sourceZone : targetZone;
   }
-  RiftMap getTranslatedMap(num mapId, Language targetLanguage) {
 
+  RiftMap getTranslatedMap(num mapId, Language targetLanguage) {
     for (var map in riftMapTranslations) {
       if (mapId == map.id && map.language == targetLanguage) {
         return map;
@@ -4555,13 +5255,14 @@ class EventTranslator {
     return null;
   }
 
-  ZoneEventTranslation findTargetTranslation(ZoneEventTranslation source, Language targetLanguage) {
+  ZoneEventTranslation findTargetTranslation(
+      ZoneEventTranslation source, Language targetLanguage) {
     for (var translation in zoneEventTranslations) {
-      if (translation.id == source.id && translation.language == targetLanguage) {
+      if (translation.id == source.id &&
+          translation.language == targetLanguage) {
         return translation;
       }
     }
     return null;
   }
-
 }

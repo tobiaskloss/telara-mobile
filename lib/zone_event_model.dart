@@ -6,6 +6,6 @@ class ZoneEvent {
   String shardName;
   String dcName;
 
-  ZoneEvent(
-      this.zoneName, this.zoneId, this.name, this.ageInMinutes, this.shardName, this.dcName);
+  ZoneEvent(this.zoneName, this.zoneId, this.name, this.ageInMinutes,
+      this.shardName, this.dcName);
 }

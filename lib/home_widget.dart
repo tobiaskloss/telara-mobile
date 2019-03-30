@@ -10,7 +10,6 @@ class Home extends StatefulWidget {
   final SharedPreferences sharedPreferences;
   Home({Key key, this.themeBloc, this.sharedPreferences}) : super(key: key);
 
-
   @override
   State<StatefulWidget> createState() {
     return _HomeState();
@@ -27,16 +26,16 @@ class _HomeState extends State<Home> {
     _children.addAll([
       EventListWidget(sharedPreferences: widget.sharedPreferences),
       //TelaraDBWidget(sharedPreferences: widget.sharedPreferences),
-      SettingsWidget(themeBloc: widget.themeBloc, sharedPreferences: widget.sharedPreferences),
+      SettingsWidget(
+          themeBloc: widget.themeBloc,
+          sharedPreferences: widget.sharedPreferences),
     ]);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Telara Mobile')
-      ),
+      appBar: AppBar(title: Text('Telara Mobile')),
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: onTabTapped,

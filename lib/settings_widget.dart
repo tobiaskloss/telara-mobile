@@ -21,7 +21,6 @@ class SettingsWidget extends StatefulWidget {
   }
 }
 
-
 class SettingsWidgetState extends State<SettingsWidget> {
   bool _useDarkTheme;
   Language _language;
@@ -55,7 +54,6 @@ class SettingsWidgetState extends State<SettingsWidget> {
 
     _showPrime = widget.sharedPreferences.getBool('events_prime');
     _showPrime = _showPrime != null ? _showPrime : true;
-
   }
 
   @override
@@ -129,7 +127,6 @@ class SettingsWidgetState extends State<SettingsWidget> {
         onChanged: _changeLanguage,
         controlAffinity: ListTileControlAffinity.trailing,
         secondary: const Icon(Icons.language),
-
       ),
     ]);
   }

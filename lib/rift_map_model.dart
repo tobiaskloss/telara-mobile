@@ -5,10 +5,10 @@ class RiftMap {
   num id;
   Language language;
 
-  RiftMap(
-      this.name, this.id, this.language);
+  RiftMap(this.name, this.id, this.language);
 
   static fromJson(Map<String, Object> map) {
-    return new RiftMap(map['name'], map['id'], LanguageConverter.fromString(map['language']));
+    return new RiftMap(
+        map['name'], map['id'], LanguageConverter.fromString(map['language']));
   }
 }

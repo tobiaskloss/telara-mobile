@@ -10,6 +10,7 @@ class RiftShard {
   RiftShard(this.dc, this.id, this.name, this.pvp, this.language);
 
   static fromJson(Map<String, Object> map) {
-    return new RiftShard(map['dc'], map['id'], map['name'], map['pvp'], LanguageConverter.fromString(map['language']));
+    return new RiftShard(map['dc'], map['id'], map['name'], map['pvp'],
+        LanguageConverter.fromString(map['language']));
   }
 }

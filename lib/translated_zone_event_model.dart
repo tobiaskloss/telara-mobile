@@ -5,7 +5,6 @@ import 'package:telara_mobile/rift_zone_model.dart';
 import 'language.dart';
 
 class TranslatedZoneEvent {
-
   String name;
   num ageInMinutes;
   Language language;
@@ -15,7 +14,6 @@ class TranslatedZoneEvent {
   RiftZone zone;
   RiftMap map;
 
-  TranslatedZoneEvent(
-  this.name, this.ageInMinutes, this.language, this.maxRuntime, this.planes, this.shard, this.zone, this.map);
-
+  TranslatedZoneEvent(this.name, this.ageInMinutes, this.language,
+      this.maxRuntime, this.planes, this.shard, this.zone, this.map);
 }

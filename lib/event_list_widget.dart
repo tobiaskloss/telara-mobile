@@ -101,40 +101,67 @@ class EventListState extends State<EventListWidget> {
       zoneEventList.addAll(await _fetchEvents(_basePathUS, _usShardMap, 'US'));
     }
     if (showPrime) {
-      zoneEventList.addAll(await _fetchEvents(_basePathUS, _primeShardMap, 'Prime'));
+      zoneEventList
+          .addAll(await _fetchEvents(_basePathUS, _primeShardMap, 'Prime'));
     }
 
     var languageString = widget.sharedPreferences.getString('language');
     var language = LanguageConverter.fromString(languageString);
 
-
     var eventTranslator = new EventTranslator();
-    List<TranslatedZoneEvent> translatedZoneEventList = zoneEventList.map((zoneEvent) => eventTranslator.translateZoneEvent(zoneEvent, language)).toList();
+    List<TranslatedZoneEvent> translatedZoneEventList = zoneEventList
+        .map((zoneEvent) =>
+            eventTranslator.translateZoneEvent(zoneEvent, language))
+        .toList();
 
-    translatedZoneEventList.sort((a, b) => a.ageInMinutes.compareTo(b.ageInMinutes));
-
+    translatedZoneEventList
+        .sort((a, b) => a.ageInMinutes.compareTo(b.ageInMinutes));
 
     createListItems(translatedZoneEventList, newItems);
     return newItems;
   }
 
-  void createListItems(List<TranslatedZoneEvent> eventNames, List<Widget> newItems) {
+  void createListItems(
+      List<TranslatedZoneEvent> eventNames, List<Widget> newItems) {
     for (var zoneEvent in eventNames) {
+
+      List<Widget> titleRowContent = new List();
+      titleRowContent.add(new Text(
+        zoneEvent.name + ' ',
+        style: new TextStyle(fontSize: 20),
+      ));
+
+      if(zoneEvent.planes != null && !zoneEvent.planes.isEmpty) {
+        var split = zoneEvent.planes.split(',');
+        for (var value in split) {
+          titleRowContent.add(Image.asset('assets/images/' + value + '.png'));
+        }
+      }
+
       newItems.add(new ListTile(
         title: new Row(
           children: <Widget>[
             new Expanded(
                 child: new Column(
               children: <Widget>[
-                new Text(zoneEvent.name, style: new TextStyle(fontSize: 20) ,),
+                new Row(children: titleRowContent),
                 new Text(zoneEvent.shard.name + ' - ' + zoneEvent.zone.name)
               ],
               crossAxisAlignment: CrossAxisAlignment.start,
             )),
             new Chip(
-              label: Text(zoneEvent.ageInMinutes.toString() + ' Min', style: new TextStyle(color: (zoneEvent.ageInMinutes < 5 ? Colors.white : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5 ? Colors.white : Colors.black))),
-              backgroundColor:
-                  zoneEvent.ageInMinutes < 5 ? Colors.lightGreen : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5 ? Colors.red : Colors.yellow,
+              label: Text(zoneEvent.ageInMinutes.toString() + ' Min',
+                  style: new TextStyle(
+                      color: (zoneEvent.ageInMinutes < 5
+                          ? Colors.white
+                          : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5
+                              ? Colors.white
+                              : Colors.black))),
+              backgroundColor: zoneEvent.ageInMinutes < 5
+                  ? Colors.lightGreen
+                  : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5
+                      ? Colors.red
+                      : Colors.yellow,
             )
           ],
         ),
