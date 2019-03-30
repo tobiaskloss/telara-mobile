@@ -126,16 +126,15 @@ class EventListState extends State<EventListWidget> {
             new Expanded(
                 child: new Column(
               children: <Widget>[
-                new Text(zoneEvent.name),
-                new Text(zoneEvent.map.name + ' - ' + zoneEvent.zone.name),
-                new Text(zoneEvent.shard.name + ' - ' + zoneEvent.shard.dc),
+                new Text(zoneEvent.name, style: new TextStyle(fontSize: 20) ,),
+                new Text(zoneEvent.shard.name + ' - ' + zoneEvent.zone.name)
               ],
               crossAxisAlignment: CrossAxisAlignment.start,
             )),
             new Chip(
-              label: Text(zoneEvent.ageInMinutes.toString() + ' Min'),
+              label: Text(zoneEvent.ageInMinutes.toString() + ' Min', style: new TextStyle(color: (zoneEvent.ageInMinutes < 5 ? Colors.white : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5 ? Colors.white : Colors.black))),
               backgroundColor:
-                  zoneEvent.ageInMinutes < 5 ? Colors.red : Colors.lightBlue,
+                  zoneEvent.ageInMinutes < 5 ? Colors.lightGreen : (zoneEvent.maxRuntime - zoneEvent.ageInMinutes) < 5 ? Colors.red : Colors.yellow,
             )
           ],
         ),

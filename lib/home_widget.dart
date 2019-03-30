@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
     super.initState();
     _children.addAll([
       EventListWidget(sharedPreferences: widget.sharedPreferences),
-      TelaraDBWidget(sharedPreferences: widget.sharedPreferences),
+      //TelaraDBWidget(sharedPreferences: widget.sharedPreferences),
       SettingsWidget(themeBloc: widget.themeBloc, sharedPreferences: widget.sharedPreferences),
     ]);
   }
@@ -47,10 +47,10 @@ class _HomeState extends State<Home> {
             icon: new Icon(Icons.event),
             title: new Text('Events'),
           ),
-          BottomNavigationBarItem(
+          /*BottomNavigationBarItem(
             icon: new Icon(Icons.storage),
             title: new Text('Database'),
-          ),
+          ),*/
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
             title: Text('Settings'),
