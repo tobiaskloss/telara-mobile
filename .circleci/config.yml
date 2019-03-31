@@ -5,10 +5,7 @@ jobs:
       - image: cirrusci/flutter
     steps:
       - checkout
-      - run: pwd
-      - run: ls -la
       - run: echo $KEY_PROPERTIES | base64 --decode > ./android/key.properties
-      - run: cat ./android/key.properties
       - run: flutter doctor
         #      - run: flutter test
       - run: flutter -v build apk
