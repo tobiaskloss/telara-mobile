@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: echo $KEY_PROPERTIES | base64 --decode > ./android/key.properties
+      - run: echo $KEY_STORE | base64 --decode > ./android/telara_mobile.jks
       - run: flutter doctor
         #      - run: flutter test
       - run: flutter -v build apk
