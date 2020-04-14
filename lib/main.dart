@@ -3,7 +3,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:telara_mobile/themes.dart';
 import 'home_widget.dart';
 
-void main() => runApp(new FutureBuilder(
+void main() {
+    WidgetsFlutterBinding.ensureInitialized();
+    runApp(new FutureBuilder(
     future: SharedPreferences.getInstance(),
     builder: (_, future) {
       return future.hasData
@@ -12,6 +14,7 @@ void main() => runApp(new FutureBuilder(
               child: new CircularProgressIndicator(),
             );
     }));
+}
 
 class App extends StatelessWidget {
   var sharedPreferences;
